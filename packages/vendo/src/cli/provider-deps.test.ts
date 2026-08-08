@@ -124,7 +124,7 @@ describe("ensureProviderDeps", () => {
         return 0;
       },
     });
-    expect(calls).toEqual([{ args: ["install", "@ai-sdk/openai@^3"] }]);
+    expect(calls).toEqual([{ args: ["install", "@ai-sdk/openai@^3.0.35"] }]);
   });
 
   it("does nothing without a credential — there is no provider to install for", async () => {
