@@ -16,7 +16,8 @@ import type { Output } from "./shared.js";
 
 const PROVIDER_SPECS: Record<EnvKeyProvider, { module: string; spec: string }> = {
   anthropic: { module: "@ai-sdk/anthropic", spec: "@ai-sdk/anthropic@^3" },
-  openai: { module: "@ai-sdk/openai", spec: "@ai-sdk/openai@^3" },
+  // Floor tracks dev-creds/model.ts: the rung sends `store: false`.
+  openai: { module: "@ai-sdk/openai", spec: "@ai-sdk/openai@^3.0.35" },
   google: { module: "@ai-sdk/google", spec: "@ai-sdk/google@^3" },
 };
 const AI_SPEC = "ai@^6";
